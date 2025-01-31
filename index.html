@@ -151,47 +151,36 @@
 <!-- Abstract Section -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+    <div class="columns is-centered">
+      <div class="column is-12">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recent advancements in multimodal Generative AI may democratize specialized architectural tasks like interpreting technical drawings and creating 3D CAD models, tasks which traditionally require expert knowledge.
-          </p>
-          <p>
-            This paper presents a comparative evaluation study of two systems—GPT-4o and Claude 3.5—in the task of architectural 3D synthesis, using two buildings from Palladio’s Four Books of Architecture (1965): Villa Rotonda and Palazzo Porto.
-          </p>
-          <p>
-            High-level architectural models and drawings were prepared inspired by Palladio’s original text and drawing corpus. Through sequential text and image prompting, the study characterizes the intrinsic abilities of the systems in (1) interpreting 2D/3D representations of buildings, (2) encoding the buildings into a CAD software script, and (3) self-improving based on outputs.
-          </p>
-          <p>
-            While both systems successfully generate individual parts, they struggle to accurately assemble these parts into the desired spatial relationships—with Claude 3.5 showing overall better performance, especially in self-correction. The results indicate the potential for language-enabled AI systems to serve as collaborative technical assistants in the architectural design process.
+            Recent advancements in multimodal Generative AI may democratize specialized architectural tasks like interpreting technical drawings and creating 3D CAD models which traditionally require expert knowledge. This paper presents a comparative evaluation study of two systems—GPT-4o and Claude 3.5—in the task of architectural 3D synthesis. It takes as a case study two buildings in Palladio’s Four Books of Architecture (1965): Villa Rotonda and Palazzo Porto. High-level architectural models and drawings of the buildings were prepared inspired by Palladio’s original text and drawing corpus. Through sequential text and image prompting, the study characterizes intrinsic abilities of the systems in (1) interpreting 2D/3D representations of buildings from drawings, (2) encoding the buildings into a CAD software script, and (3) self-improving based on outputs. While both systems successfully generate individual parts, they struggle to accurately assemble these parts into the desired spatial relationships, with Claude 3.5 showing overall better performance, especially in self-correcting its output. The study contributes to ongoing research on benchmarking the strengths and weaknesses of off-the-shelf AI systems in intelligent human tasks requiring discipline-specific knowledge. The results show the potential of language-enabled AI systems to act as collaborative technical assistants in the architectural design process.
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
+<!-- End Abstract Section -->
+
 
 <!-- Methodology Section -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Methodology</h2>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+    <div class="columns is-centered">
+      <div class="column is-12">
+        <h2 class="title is-3">Methodology</h2>
         <div class="content has-text-justified">
           <p>
-            This study follows the evaluation pipeline illustrated in Figure 1. Broadly, the methodology involves corpus selection and preparation, prompt design for interpreting architectural drawings, and assessing AI system performance in CAD generation and self-correction using a matrix scoring system.
-          </p>
-          <p>
-            These three aspects are discussed in further detail in the following sections. The generative AI systems used in the evaluation are GPT-4o in the ChatGPT Playground (version of May 13, 2024) and Claude 3.5 Sonnet (version of October 22, 2024) in the Anthropic Workbench.
+            This study follows the evaluation pipeline described in the diagram in Figure 1. Broadly, the methodology of evaluation involves (a) corpus selection and preparation, (b) prompt design and interpretation of architectural drawings, and (c) assessment of AI system performance in CAD generation and self-correction using a matrix scoring system. These three aspects of the evaluation methodology are described in the following sections in more detail. The generative AI systems used are GPT-4o in the ChatGPT Playground (version of May 13, 2024) and Claude 3.5 Sonnet (version of October 22, 2024) in the Anthropic Workbench.
           </p>
         </div>
-      </div>  
+      </div>
     </div>
-    <div class="columns is-centered has-text-centered">
-      <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-12">
         <h3 class="title is-4">Methodology Diagram</h3>
         <!-- Insert Methodology Diagram here -->
         <img src="static/images/0_Methodology.png" alt="Methodology Diagram" width="100%">
@@ -199,6 +188,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- Results Section -->
 <section class="section hero is-light">
@@ -210,12 +200,11 @@
       <div class="column is-12">
         <h3 class="title is-4">GPT4o Result in The Case of Villa Rotonda</h3>
         <img src="static/images/4_Result-Evaluation_Villa-Rotonda_GPT.png" alt="Interpreting 2D/3D Representations" width="100%">
-        <p class="has-text-justified">
-          Model results and evaluations for GPT-4o in the case of Villa Rotonda are given in Figure 4. From Step 1 to Step 3, the system successfully generates the Main Hall and Side Hall, but it fails to generate the four loggias with the correct proportion and orientation.
-        </p>
-        <p class="has-text-justified">
-          In Step 4, the system assembles all the parts but does not self-correct proportional inaccuracies of the Entrance or the spatial relationships between components. From Step 5 onward, while some part details improve, the overall proportion and spatial relationships remain problematic. GPT-4o achieved an average performance of 61.56%, with notable limitations in generating correct spatial relationships.
-        </p>
+        <div class="content has-text-justified">
+          <p>
+            Model results and evaluations for GPT-4o in the case of Villa Rotonda are given in Figure 4. From Step 1 to Step 3, the system successfully generates the Main Hall and Side Hall, but it fails to generate the four loggias with the correct proportion and orientation. In Step 4, the system assembled all the parts but did not self-correct proportional inaccuracies of the Entrance or incorrect spatial relationships between all components. From Step 5, the system self-improves in certain part details, but the overall proportion and spatial relationships are still missing. GPT-4o achieved 61.56% average performance, with limitations in generating correct spatial relationships.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -224,12 +213,11 @@
       <div class="column is-12">
         <h3 class="title is-4">Claude 3.5 Result in The Case of Villa Rotonda</h3>
         <img src="static/images/4_Result-Evaluation_Villa-Rotonda_Claude-3-5.png" alt="Encoding Designs into CAD Scripts" width="100%">
-        <p class="has-text-justified">
-          Model results and evaluations for Claude 3.5 in the case of Villa Rotonda are given in Figure 5. From Steps 1 to 3, the system generates individual parts with correct positions but fails to correctly locate the four components in the Entrance.
-        </p>
-        <p class="has-text-justified">
-          From Step 4 onward, the model assembly shows inaccuracies in proportions and spatial relationships between parts. However, Claude 3.5 demonstrates consistent refinement of individual component details. It achieved an average performance of 73.12%, outperforming GPT-4o in detailed part generation and self-correction, though it faces similar challenges in maintaining correct spatial relationships.
-        </p>
+        <div class="content has-text-justified">
+          <p>
+            Model results and evaluations for Claude 3.5 in the case of Villa Rotonda are given in Figure 5. From Steps 1 to 3, the system generated individual parts with correct positions but failed to correctly locate the four components in the Entrance. From Step 4 onward, the model assembly showed inaccuracies in proportions and spatial relationships between parts. Despite these, the system demonstrated consistent refinement of details in individual components. Claude 3.5 Sonnet achieved an average performance of 73.12%, outperforming GPT-4o in generating detailed parts and self-correcting but faces similar challenges in maintaining correct spatial relationships.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -238,12 +226,11 @@
       <div class="column is-12">
         <h3 class="title is-4">GPT4o Result in The Case of Plazzo Porto</h3>
         <img src="static/images/4_Result-Evaluation_Palazzo-Porto_GPT.png" alt="Assembly of Parts" width="100%">
-        <p class="has-text-justified">
-          Model results for GPT-4o in the case of Palazzo Porto are shown in Figure 6. From Steps 1 to 3, individual parts of the building are modeled with correct positions and orientations, although the proportions of the Main Building and Courtyard parts are incorrect.
-        </p>
-        <p class="has-text-justified">
-          In Step 4, the assembly displays coherence by accurately recreating the position, orientation, and spatial relationships between parts, despite errors in the Courtyard and Staircase proportions. From Step 5 onward, iterative refinements improve the Staircase proportions and add details to the Main Building, though overall proportions still require improvement. GPT-4o achieved an average performance of 65%, with weaknesses in correcting spatial relationships during iterative self-improvement.
-        </p>
+        <div class="content has-text-justified">
+          <p>
+            Model results for GPT-4 and Claude 3.5 in the case of Palazzo Porto are given in Figure 6. From Steps 1 to 3, individual parts of the building were modelled with correct positions and orientations, though the proportions of the Main Building and Courtyard parts were incorrect. In Step 4, the assembly displayed coherence, accurately recreating the position, orientation, and spatial relationships between parts. However, errors persisted in generating the correct proportions for the Courtyard and Staircase parts. From Step 5 onward, iterative refinements improved the proportions of the Staircase part and added details to the Main Building part (Figure 5a). Despite these refinements, there is still room for improving the overall proportions. GPT-4o achieved an average performance of 65%, with weaknesses in correcting spatial relationships, especially during the iterative self-improvement stages.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -252,12 +239,11 @@
       <div class="column is-12">
         <h3 class="title is-4">Claude 3.5 Result in The Case of Plazzo Porto</h3>
         <img src="static/images/4_Result-Evaluation_Palazzo-Porto_Claude-3-5.png" alt="Self-Improvement and Adaptability" width="100%">
-        <p class="has-text-justified">
-          From Steps 1 to 3, all parts are generated with correct positions, proportions, and orientations. In Step 4, the assembly appears visually consistent with the design drawings, except for an incorrect spatial relationship of the Stair part relative to the other components.
-        </p>
-        <p class="has-text-justified">
-          Further iterative improvements show promise in refining details, though minor issues with spatial relationships persist.
-        </p>
+        <div class="content has-text-justified">
+          <p>
+            From Steps 1 to 3, all parts were generated with correct positions, proportions, and orientations. In Step 4, the assembly appeared visually consistent with the design drawings, except for an incorrect spatial relationship of the Stair part relative to the rest of the model.
+          </p>
+        </div>
       </div>
     </div>
   </div>
